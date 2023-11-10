@@ -1,0 +1,12 @@
+ignore_case=0,reg_exp=1,cross_line=1,binary_file=0,extract_flag=0,whole_word=0
+
+<find>e._v\("Advertisement"</find>
+<replace>e._v\(""</replace>
+<find>e._v\("广告"</find>
+<replace>e._v\(""</replace>
+<find>staticClass:"ad-img-list"</find>
+<replace>staticClass:""</replace>
+<find>staticClass:"ad-img"</find>
+<replace>staticClass:""</replace>
+<find>"lazy-image-view"</find>
+<replace>""</replace>
