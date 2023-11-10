@@ -12,20 +12,20 @@ proxy-groups:
     proxies:
       - ♻️ 自动选择
       - 🎯 全球直连
-      - 青衣工作室内部香港节点
+      - 香港
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
     interval: 300
     proxies:
-      - 青衣工作室内部香港节点
+      - 香港
   - name: 🎥 NETFLIX
     type: select
     proxies:
       - 🔰 节点选择
       - ♻️ 自动选择
       - 🎯 全球直连
-      - 青衣工作室内部香港节点
+      - 香港
   - name: ⛔️ 广告拦截
     type: select
     proxies:
@@ -44,32 +44,32 @@ proxy-groups:
       - 🔰 节点选择
       - ♻️ 自动选择
       - 🎯 全球直连
-      - 青衣工作室内部香港节点
+      - 香港
   - name: 🌏 国内媒体
     type: select
     proxies:
       - 🎯 全球直连
-      - 青衣工作室内部香港节点
+      - 香港
       - 🔰 节点选择
   - name: Ⓜ️ 微软服务
     type: select
     proxies:
       - 🎯 全球直连
       - 🔰 节点选择
-      - 青衣工作室内部香港节点
+      - 香港
   - name: 📲 电报信息
     type: select
     proxies:
       - 🔰 节点选择
       - 🎯 全球直连
-      - 青衣工作室内部香港节点
+      - 香港
   - name: 🍎 苹果服务
     type: select
     proxies:
       - 🔰 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
-      - 青衣工作室内部香港节点
+      - 香港
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -85,7 +85,7 @@ proxy-groups:
       - 🔰 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
-      - 青衣工作室内部香港节点
+      - 香港
 rules:
  - DOMAIN-SUFFIX,local,🎯 全球直连
  - IP-CIDR,192.168.0.0/16,🎯 全球直连,no-resolve
