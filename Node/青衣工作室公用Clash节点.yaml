@@ -6,6 +6,8 @@ log-level: info
 external-controller: :9090
 proxies:
   - {name: 香港, server: 112.29.94.23, port: 49006, type: vmess, uuid: 21a9bff2-72de-4e62-93ff-8b159f66d875, alterId: 64, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
+  - {name: 美国 1, server: 45.199.138.191, port: 30000, type: vmess, uuid: 418048af-a293-4b99-9b0c-98ca3580dd24, alterId: 64, cipher: auto, tls: true, skip-cert-verify: true, network: ws, ws-path: /path/1699280099138, ws-headers: {Host: www.42077230.xyz}, udp: true}
+  - {name: 美国 2, server: 45.199.138.146, port: 30000, type: vmess, uuid: 4ec0ae62-de09-4029-904a-0313d4628ecf, alterId: 64, cipher: auto, tls: true, skip-cert-verify: true, network: ws, ws-path: /path/1699193100388, ws-headers: {Host: www.19229362.xyz}, udp: true}
 proxy-groups:
   - name: 🔰 节点选择
     type: select
@@ -19,13 +21,14 @@ proxy-groups:
     interval: 300
     proxies:
       - 青衣工作室公用香港节点
+      - 美国 1
+      - 美国 2
   - name: 🎥 NETFLIX
     type: select
     proxies:
       - 🔰 节点选择
       - ♻️ 自动选择
       - 🎯 全球直连
-      - 青衣工作室公用香港节点
   - name: ⛔️ 广告拦截
     type: select
     proxies:
@@ -44,32 +47,27 @@ proxy-groups:
       - 🔰 节点选择
       - ♻️ 自动选择
       - 🎯 全球直连
-      - 青衣工作室公用香港节点
   - name: 🌏 国内媒体
     type: select
     proxies:
       - 🎯 全球直连
-      - 青衣工作室公用香港节点
       - 🔰 节点选择
   - name: Ⓜ️ 微软服务
     type: select
     proxies:
       - 🎯 全球直连
       - 🔰 节点选择
-      - 青衣工作室公用香港节点
   - name: 📲 电报信息
     type: select
     proxies:
       - 🔰 节点选择
       - 🎯 全球直连
-      - 青衣工作室公用香港节点
   - name: 🍎 苹果服务
     type: select
     proxies:
       - 🔰 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
-      - 青衣工作室公用香港节点
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -85,7 +83,6 @@ proxy-groups:
       - 🔰 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
-      - 青衣工作室公用香港节点
 rules:
  - DOMAIN-SUFFIX,local,🎯 全球直连
  - IP-CIDR,192.168.0.0/16,🎯 全球直连,no-resolve
